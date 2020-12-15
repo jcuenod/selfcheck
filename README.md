@@ -16,9 +16,15 @@ The (react + tailwind) client facilitates touchless interaction, given the avail
 
 ### Docker
 
+Initial setup:
+
 1. Copy `example_config.js`, rename it to `config.js`, and set the configuration variables.
-1. docker build -t selfcheck-container .
-1. docker run --name selfcheck-app -p 80:3000 selfcheck-container
+1. Add images (like the logo and feature image) to `client/public/`.
+
+Build and run Docker container:
+
+1. `docker build -t selfcheck-container .`
+1. `docker run --name selfcheck-app -p 80:3000 selfcheck-container`
 
 The `-p 80:3000` step binds port 3000 in the container to port 80 on localhost (so nothing else can be listening on port 80). You can now visit the site at <http://localhost>. If you want to add SSL, the easiest method is probably to set up a reverse proxy in front of the container and negotiate TLS using nginx or apache.
 
