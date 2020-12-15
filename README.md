@@ -14,7 +14,15 @@ The (react + tailwind) client facilitates touchless interaction, given the avail
 
 ## Installation
 
-### Server
+### Docker
+
+1. Copy `example_config.js`, rename it to `config.js`, and set the configuration variables.
+1. docker build -t selfcheck-container .
+1. docker run --name selfcheck-image -p 80:3000 selfcheck-container
+
+### Manual
+
+#### Server
 
 1. Clone the repository to your machine.
 1. Run `npm install` in the cloned directory.
@@ -22,7 +30,7 @@ The (react + tailwind) client facilitates touchless interaction, given the avail
 1. Set your node env port if you don't want it to run on 3000 (recommended).
 1. Optionally, set up an Apache reverse proxy, and limit to the IP address(es) of your kiosk(s). The server can only handle requests from IPs in the configuration file.
 
-### Client
+#### Client
 
 1. Navigate to the `/client` directory
 1. Run `npm install` and `npm run build` to set up the client. The server will serve the client directly from `/client/build/` which is generated in the `npm run build` step.
