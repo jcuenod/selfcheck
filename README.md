@@ -36,7 +36,7 @@ To start the container in future, run `docker run selfcheck-app`
 
 1. Clone the repository to your machine.
 1. Run `npm install` in the cloned directory.
-1. Copy `example_config.js`, rename it to `config.js`, and set the configuration variables.
+1. Copy `example_config.js`, rename it to `config.js`, and set the configuration variables. *Note: images can be loaded from relative paths with `client/build` as the root.*
 1. Set your node env port if you don't want it to run on 3000 (recommended).
 1. Optionally, set up an Apache reverse proxy, and limit to the IP address(es) of your kiosk(s). The server can only handle requests from IPs in the configuration file.
 
